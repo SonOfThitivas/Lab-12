@@ -70,7 +70,7 @@ class App(Tk):
         rev.reverse()
         rev = "".join(rev)
         if rev != ".txt":
-            messagebox.showerror("Error", "File is not .txt")
+            messagebox.showerror("Error", "Failed to open : Invalid file tpye")
             print(file[-1:-5])
         else:
             print(file)
@@ -128,7 +128,7 @@ class App(Tk):
         index = self.textArea.search(searchWord, index, nocase=True, stopindex="end")
         
         if self.search.get() == "":
-            messagebox.showwarning("Searching", "Search term not found")
+            messagebox.showinfo("Search", "Search term not found.")
         else:
             # last index sum of current index and
             # length of text
